@@ -43,9 +43,10 @@ const putExportacion = async(req, res) =>{
 }
 
 const deleteExportacion = async(req, res) =>{
-    const {id_p} = req.query //Desestructurar
+    //Desestructurar
     try {
-        const exportacion = await Exportacion.findOneAndDelete({id_p: id_p})
+        const exportacion = await Exportacion.findOneAndDelete(req.params.id_p);
+       // const exportacion = await Exportacion.findOneAndDelete({id_p: id_p})
             res.json(exportacion)
     } catch(error) {
         mensaje = error
