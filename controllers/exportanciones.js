@@ -46,7 +46,7 @@ const deleteExportacion = async(req, res) =>{
     const {id_p} = req.query //Desestructurar
     try {
         const exportacion = await Exportacion.findOneAndDelete({id_p: id_p})
-            mensaje = 'Eliminacion exitosa'
+            resJson(exportacion)
     } catch(error) {
         mensaje = error
     }
