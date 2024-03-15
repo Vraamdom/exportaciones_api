@@ -28,7 +28,7 @@ const postExportacion = async(req, res) => {
 
 
 const putExportacion = async(req, res) =>{
-    const {id_p,producto, kilos, precio_kilo,precio_dolar_actual} = req.body
+    const {id_p} = req.query
     try {
         const exportacion = await Exportacion.findOneAndUpdate({id_p: id_p},
             {producto:producto, kilos:kilos, precio_kilo:precio_kilo, precio_dolar_actual:precio_dolar_actual,})
