@@ -9,11 +9,11 @@ const { getExportacion, postExportacion, putExportacion, deleteExportacion } = r
 
 route.get('/', getExportacion)
 
-route.post('/', postExportacion)
+route.post('/:', postExportacion)
 
-route.put('/', putExportacion)
+route.put('/:id_p', putExportacion)
 
-route.delete('/', deleteExportacion)
+route.delete('/:id_p', deleteExportacion)
 // //Consultar un dato
 // route.get('/consultarUsuario', (req, res) => {
 //     res.json({
