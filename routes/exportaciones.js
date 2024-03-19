@@ -9,7 +9,7 @@ const { getExportacion, postExportacion, putExportacion, deleteExportacion } = r
 
 route.get('/', getExportacion)
 
-route.post('/:', postExportacion)
+route.post('/', postExportacion)
 
 route.put('/:id', putExportacion)
 
