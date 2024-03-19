@@ -28,9 +28,9 @@ const postExportacion = async(req, res) => {
 
 
 const putExportacion = async(req, res) =>{
-    const {id_p,producto, kilos, precio_kilo,precio_dolar_actual} = req.body
+    const {id,producto, kilos, precio_kilo,precio_dolar_actual} = req.body
     try {
-        const exportacion = await Exportacion.findOneAndUpdate({id_p: id_p},
+        const exportacion = await Exportacion.findOneAndUpdate({id: id},
             {producto:producto, kilos:kilos, precio_kilo:precio_kilo, precio_dolar_actual:precio_dolar_actual,})
             mensaje = 'Actualizacion exitosa'
     } catch(error) {
@@ -45,8 +45,8 @@ const putExportacion = async(req, res) =>{
 const deleteExportacion = async(req, res) =>{
     //Desestructurar
     try {
-        const exportacion = await Exportacion.findOneAndDelete(req.params.id_p);
-       // const exportacion = await Exportacion.findOneAndDelete({id_p: id_p})
+        const exportacion = await Exportacion.findOneAndDelete(req.params.id);
+       // const exportacion = await Exportacion.findOneAndDelete({id: id})
             res.json(exportacion)
     } catch(error) {
         mensaje = error
