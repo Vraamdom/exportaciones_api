@@ -11,9 +11,9 @@ route.get('/', getExportacion)
 
 route.post('/', postExportacion)
 
-route.put('/:id', putExportacion)
+route.put('/id_p', putExportacion)
 
-route.delete('/:id', deleteExportacion)
+route.delete('/id_p', deleteExportacion)
 // //Consultar un dato
 // route.get('/consultarUsuario', (req, res) => {
 //     res.json({
