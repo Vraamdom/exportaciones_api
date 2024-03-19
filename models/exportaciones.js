@@ -1,7 +1,7 @@
 const {Schema, model, trusted} = require('mongoose')
 
 const ProductoSchema = ({
-    id_p:{
+    id:{
         type: Number,
         unique:true,
         required:[true, 'El id del producto es necesario']
@@ -21,12 +21,12 @@ const ProductoSchema = ({
     precio_kilo: {
         type:Number,
         unique: false,
-        required:[true, 'La hora inicial del evento es requeriada'],
+        required:[true, 'eL precio del kilo es necesario'],
     },
 
     precio_dolar_actual: {
         type:Number,
-        required: [true, 'El encargado de la fundacion es requerido']
+        required: [true, 'El precio del dolar es necesario']
     }
 })
 
